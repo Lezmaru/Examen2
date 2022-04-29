@@ -1,3 +1,3 @@
 Integrantes
--Luis Perez Caro
+-Luis Pérez Caro
 -Cristhian Yañez Alvarez
