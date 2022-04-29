@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/estilo.css">
+	<script src="https://kit.fontawesome.com/3034e6a9ef.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+	<script src="https://unpkg.com/vue@3"></script>
+	<title>Clasificados</title>
+</head>
+<body>
+	<div>
+		<img style = "width: 15%;"src="images/logo.png">
+		<center> 
+		<div id="app">
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Categorias
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			  <a class="dropdown-item" v-on:click="oferta" href="#oferta">Oferta De Servicios</a>
+			  <a class="dropdown-item" v-on:click="compra" href="#compra">Compra y Venta de Productos</a>
+			  <a class="dropdown-item" v-on:click="venta" href="#venta">Venta de Inmueles</a>
+			</div>
+		  </div>
+		</br>
+		</div>
+		  <script>
+			Vue.createApp({
+			  data() {
+				return{
+				}
+			  }
+			  ,
+			  methods: {
+				oferta(){
+				  alert("Dirigiendo a la seccion de ofertas");
+				},
+				compra(){
+				  alert("Dirigiendo a la seccion de compra y venta de  productos ");
+				},
+				venta(){
+				  alert("Dirigiendo a la seccion de venta de inmuebles");
+				},
+			}
+		}).mount('#app')
+	  </script>
+		  </center>
+		  <table class="table table-bordered">
+			<ul>
+			  <li><a href="index.html">Inicio/Home - Destacados</a></li>
+			  <li><a href="servicios.html">Servicios</a></li>
+			  <li><a class="active" href="clasificados.html">Anuncios Clasificados</a></li>
+			  <li><a href="contacto.html">Contactos</a></li>
+			  <li><a href="">Sobre Periódico "La Paz"</a></li>
+		  </ul>
+	  </table>
+	</div>
+	<div class="caja">
+		<a name="oferta" />
+		<font color=black size="10" face="Comic Sans MS">
+		Oferta De Servicios
+		</font>
+		<center>
+			<hr>
+			<hr>
+			<div id="off">
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/mecanico.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Mecánico</h5>
+			  <a v-on:click="mecanico"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+			</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/electricista.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Electricista</h5>
+			  <a v-on:click="electricista"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/limpieza.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Limpieza</h5>
+			  <a v-on:click="limpieza"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <a name="compra" />
+		  <font color=black size="10" face="Comic Sans MS">
+		  Compra y Venta de Productos
+		</font>
+		  <hr>
+			<hr>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/casa.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Compro inmuebles</h5>
+			  <a v-on:click="inmuebles" class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/huawei.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Venta Celular Huawei</h5>
+			  <a v-on:click="huawei"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/calcetines.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Venta Calcetines</h5>
+			  <a v-on:click="calcetines"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <a name="venta" />
+		  <font color=black size="10" face="Comic Sans MS">
+		  Venta de Inmuebles
+		  </font>
+		  <hr>
+			<hr>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/casa1.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Casa de 300x300 metros</h5>
+			  <a v-on:click="casa1"  class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/casa2.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Casa de 300x500 metros</h5>
+			  <a v-on:click="casa2" class="btn btn-primary">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		  <div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="images/casa3.jpg" alt="Card image cap">
+			<div class="card-body">
+			  <h5 class="card-title">Casa de 400x400 metros</h5>
+			  <input type="button" value="Enviar pedido" v-on:click="casa3">
+			  <a class="btn btn-primary" v-on:click="casa3" href="#">Mas información</a>
+			</div>
+		  </div>
+		</br>
+		</center>
+		</div>
+		<script>
+			Vue.createApp({
+			  data() {
+				return{
+				}
+			  }
+			  ,
+			  methods: {
+				electricista(){
+				  alert("Servicio electrico 24/7, realizamos cualquier tipo de conexiones tlf:75421306");
+				},
+				limpieza(){
+				  alert("Servicio de limpieza, nuestra especialidad son los hogares grandes tlf:41256784");
+				},
+				mecanico(){
+				  alert("Servicio mecanico, realizamos mantenimiento y reparaciones tlf:3201478");
+				},
+				inmuebles(){
+				  alert("Compramos cualquier tipo de inmueble tlf:45612789");
+				},
+				calcetines(){
+				  alert("Venta de calcetines con tematica de navidad tlf:26754103");
+				},
+				huawei(){
+				  alert("Venta de Huawei a medio uso tlf:12645752");
+				},
+				casa1(){
+				  alert("Venta de Casa en la zona sur de la ciudad tlf:41368750");
+				},
+				casa2(){
+				  alert("Venta de Casa moderna en la zona norte de la ciudad tlf:41532045");
+				},
+				casa3(){
+				  alert("Venta de casa con enorme jardin tlf:47510324");
+				},
+			  }
+			}).mount('#off')
+		  </script>
+	</div>
+	<template>
+	</template>
+	<footer class="pie-pagina">
+		<div class="grupo-1">
+			<div class="box">
+				<figure>
+					<a href="#">
+						<img src="images/logo.png" alt="Logo">
+					</a>
+				</figure>
+			</div>
+			<div class="box">
+				<h2>SOBRE NOSOTROS</h2>
+				<p>El mejor periódico que puedes leer</p>
+				<p>Todo sobre lo actual, noticias, farandula, tecnología.</p>
+			</div>
+			<div class="box">
+				<h2>SIGUENOS EN NUESTRAS REDES</h2>
+					<div class="red-social">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-instagram"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-youtube"></a>
+						<a href="#" class="fa-brands fa-tiktok"></a>
+					</div>
+			</div>
+		</div>
+		<div class="grupo-2">
+			<small>&copy; 2021 <b>Luis Felipe Pérez Caro - Cristhian Alejandro Yañez Alvarez - Periódico La Paz</b> - Todos los derechos reservados</small>
+		</div>
+	</footer>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
